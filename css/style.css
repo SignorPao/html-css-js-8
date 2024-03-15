@@ -1,13 +1,8 @@
-/* VARIABLES */
-:root {
-  /* colors */
-  --primary: #00bceb;
-  --secondary: #0070d2;
-  --secondary-accent: #0060ad;
-  --text-default: #1b1c1d;
-  --text-default-secondary: #606162;
-  --color-gray: #606162;
+@import url("base.css");
+@import url("reset.css");
 
-  /* fonts */
-  --font-primary: "Montserrat", sans-serif;
-}
+/*========== HEADER & NAV ==========*/
+
+/*========== MAIN ==========*/
+
+/*========== FOOTER ==========*/

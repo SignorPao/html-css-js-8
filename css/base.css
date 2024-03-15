@@ -1,0 +1,57 @@
+/*========== VARIABLES ==========*/
+:root {
+  /*----- Colors -----*/
+  --color-primary: #00bceb;
+  --color-secondary: #0070d2;
+  --color-secondary-accent: #0060ad;
+  --color-text-default: #1b1c1d;
+  --color-text-default-secondary: #606162;
+  --bg-gray: #f4f5f6;
+  --bg-white: #f2f2f2;
+
+  /*----- Font & Typography -----*/
+  --font-primary: "Montserrat", sans-serif;
+  --font-primary-2: "Roboto", sans-serif;
+  --font-handwrite-1: "Nothing You Could Do", cursive;
+  --font-handwrite-2: "Hurricane", cursive;
+  --font-handwrite-3: "Vujahday Script", cursive;
+  /* *fz-font size */
+  --fz-banner-title-mob: 4rem;
+  --fz-banner-title-tab: 5.2rem;
+  --fz-banner-title-pc: 6.4rem;
+  --fz-section-title-mob: 2.4rem;
+  --fz-section-title-tab: 3.2rem;
+  --fz-article-title: 2rem;
+  --fz-text-default: 1.6rem;
+  --fz-text-small: 1.4rem;
+  --fz-text-smaller: 1.2rem;
+  /* *fw-font weight */
+  --fw-default: 300;
+  --fw-medium: 500;
+
+  /*----- Length Values -----*/
+  --margin-bottom: 2rem;
+  --max-width-laptop: 1366px;
+  --max-width-pc: 1440px;
+  --padding-inline: 1rem;
+
+  /*----- Other Values -----*/
+  --transition: 350ms ease-in;
+}
+
+/*========== BASE ==========*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
+  font-size: var(--fz-text-default);
+  font-family: var(--font-primary-2);
+  font-weight: var(--fw-default);
+  color: var(--color-text-default);
+}
+
+/*========== REUSABLE CLASSES ==========*/
+.container {
+  max-width: var(--max-width-laptop);
+  margin-inline: auto;
+}
