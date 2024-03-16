@@ -1,13 +1,33 @@
 /*========== VARIABLES ==========*/
 :root {
   /*----- Colors -----*/
-  --color-primary: #00bceb;
+  --color-primary: #0096d6;
   --color-secondary: #0070d2;
   --color-secondary-accent: #0060ad;
   --color-text-default: #1b1c1d;
   --color-text-default-secondary: #606162;
+  --color-light-gray: #b6b6b6;
   --bg-gray: #f4f5f6;
-  --bg-white: #f2f2f2;
+  /* --bg-white: #f2f2f2; */
+  --bg-white: #ffffff;
+
+  /*----- Shadow -----*/
+  --shadow-color: 0deg 0% 63%;
+  --shadow-low: 0px 0.5px 0.6px hsl(var(--shadow-color) / 0.34),
+    0px 0.9px 1px -1.2px hsl(var(--shadow-color) / 0.34),
+    0px 2.1px 2.4px -2.5px hsl(var(--shadow-color) / 0.34);
+  --shadow-medium: 0px 0.5px 0.6px hsl(var(--shadow-color) / 0.36),
+    0px 1.7px 1.9px -0.8px hsl(var(--shadow-color) / 0.36),
+    0.1px 4.2px 4.7px -1.7px hsl(var(--shadow-color) / 0.36),
+    0.2px 10.3px 11.6px -2.5px hsl(var(--shadow-color) / 0.36);
+  --shadow-high: 0px 0.5px 0.6px hsl(var(--shadow-color) / 0.34),
+    0.1px 3px 3.4px -0.4px hsl(var(--shadow-color) / 0.34),
+    0.1px 5.6px 6.3px -0.7px hsl(var(--shadow-color) / 0.34),
+    0.2px 9.2px 10.4px -1.1px hsl(var(--shadow-color) / 0.34),
+    0.3px 14.7px 16.5px -1.4px hsl(var(--shadow-color) / 0.34),
+    0.5px 23px 25.9px -1.8px hsl(var(--shadow-color) / 0.34),
+    0.7px 35px 39.4px -2.1px hsl(var(--shadow-color) / 0.34),
+    1px 51.6px 58.1px -2.5px hsl(var(--shadow-color) / 0.34);
 
   /*----- Font & Typography -----*/
   --font-primary: "Montserrat", sans-serif;
@@ -28,11 +48,14 @@
   /* *fw-font weight */
   --fw-default: 300;
   --fw-medium: 500;
+  --fw-bold: 800;
 
   /*----- Length Values -----*/
   --margin-bottom: 2rem;
   --max-width-laptop: 1366px;
   --max-width-pc: 1440px;
+  --max-body: 1600px;
+  --nav-mobile-heigth: 60px;
   --padding-inline: 1rem;
 
   /*----- Other Values -----*/
@@ -48,9 +71,16 @@ body {
   font-family: var(--font-primary-2);
   font-weight: var(--fw-default);
   color: var(--color-text-default);
+  background-color: var(--bg-gray);
 }
 
 /*========== REUSABLE CLASSES ==========*/
+.wrapper {
+  max-width: var(--max-body);
+  margin-inline: auto;
+  box-shadow: var(--shadow-medium);
+}
+
 .container {
   max-width: var(--max-width-laptop);
   margin-inline: auto;
