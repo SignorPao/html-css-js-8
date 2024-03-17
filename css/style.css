@@ -4,21 +4,21 @@
 /*========== HEADER & NAV ==========*/
 header {
   background-color: var(--bg-white);
-  height: 500px;
+  height: 800px;
 }
 
 /* mobile navigation */
 .nav-mobile {
   height: var(--nav-mobile-heigth);
-  padding-inline: var(--padding-inline);
   background-color: var(--bg-gray);
   border-block-end: thin solid var(--color-light-gray);
-  font-family: var(--font-primary);
-  font-weight: var(--fw-medium);
-  font-size: var(--fz-text-small);
 }
 
 .nav-mobile ul {
+  padding-inline: var(--padding-inline);
+  font-family: var(--font-primary);
+  font-size: var(--fz-text-smaller);
+  font-weight: var(--fw-medium);
   height: 100%;
   display: flex;
   gap: 3rem;
@@ -51,6 +51,70 @@ header {
 
 .nav-mobile li.burger {
   width: 40px;
+}
+
+.nav-mobile .mobile-menu {
+  /* transform: translateY(-200%); */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  left: 0;
+  width: 100%;
+  padding-block: 2rem;
+  height: fit-content;
+  font-family: var(--font-primary-2);
+  font-weight: var(--fw-default);
+  font-size: var(--fz-text-default);
+  box-shadow: var(--shadow-low);
+}
+
+.nav-mobile .mobile-menu.open {
+  transform: translateY(0);
+}
+
+.nav-mobile .mobile-menu li {
+  cursor: pointer;
+  width: 100%;
+  line-height: 2;
+}
+
+.nav-mobile .mobile-menu li:hover a {
+  text-decoration: underline;
+}
+
+.nav-mobile .mobile-menu a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-mobile .mobile-menu li:nth-child(-n + 4) {
+  margin-block-end: var(--margin-bottom);
+}
+
+.nav-mobile .mobile-menu li:nth-child(-n + 4) a::after {
+  content: "";
+  position: absolute;
+  right: var(--padding-inline);
+  border: solid var(--color-text-default);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(-45deg);
+}
+
+.nav-mobile .mobile-menu li:nth-last-child(-n + 4):not(:last-child) {
+  border-block-end: thin solid var(--color-light-gray);
+  margin-block-end: calc(var(--margin-bottom) / 2);
+}
+
+.nav-mobile .mobile-menu img {
+  max-width: 1.6rem;
+}
+
+.nav-mobile .mobile-menu a:last-child {
+  gap: 0.8rem;
 }
 
 /* desktop navigation */
