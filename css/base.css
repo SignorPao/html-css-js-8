@@ -39,7 +39,7 @@
   /* *fw-font weight */
   --fw-thin: 300;
   --fw-default: 400;
-  --fw-medium: 600;
+  --fw-medium: 500;
   --fw-bold: 800;
 
   /*----- Length Values -----*/
@@ -50,6 +50,7 @@
   --nav-mobile-heigth: 60px;
   --padding-inline: 2rem;
   --padding-inline-wide: 4rem;
+  --padding-inline-pc: 6rem;
 
   /*----- Other Values -----*/
   --transition: 350ms ease-in;
