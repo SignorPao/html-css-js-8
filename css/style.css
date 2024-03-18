@@ -49,12 +49,16 @@ header {
   height: 26px;
 }
 
-.nav-mobile li.burger {
+.nav-mobile li.burger img {
   width: 40px;
 }
 
+.nav-mobile li.burger span {
+  display: none;
+}
+
 .nav-mobile .mobile-menu {
-  /* transform: translateY(-200%); */
+  transform: translateY(-200%);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -129,4 +133,35 @@ main {
 footer {
   background-color: var(--bg-gray);
   height: 200px;
+}
+
+/*========== BREAKPOINTS ==========*/
+/* 768px */
+@media (min-width: 768px) {
+  .nav-mobile ul {
+    padding-inline: var(--padding-inline-wide);
+  }
+
+  .nav-mobile li.logo img {
+    max-width: 90px;
+  }
+
+  .nav-mobile li.logo {
+    font-size: var(--fz-text-default);
+  }
+
+  .nav-mobile li.burger a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nav-mobile li.burger span {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: var(--fw-default);
+    font-size: var(--fz-text-default);
+    font-family: var(--font-primary-2);
+  }
 }

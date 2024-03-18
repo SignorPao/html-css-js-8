@@ -49,6 +49,7 @@
   --max-body: 1600px;
   --nav-mobile-heigth: 60px;
   --padding-inline: 2rem;
+  --padding-inline-wide: 4rem;
 
   /*----- Other Values -----*/
   --transition: 350ms ease-in;
