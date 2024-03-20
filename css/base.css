@@ -34,7 +34,7 @@
   --fz-banner-title-pc: 6.4rem;
   --fz-section-title-mob: 2.4rem;
   --fz-section-title-tab: 3.2rem;
-  --fz-article-title: 2rem;
+  --fz-article-title: 2.1rem;
   --fz-text-default: 1.6rem;
   --fz-text-small: 1.4rem;
   --fz-text-smaller: 1.2rem;
@@ -53,6 +53,7 @@
   --padding-inline: 2rem;
   --padding-inline-wide: 4rem;
   --padding-inline-pc: 8rem;
+  --padding-inline-pc-wide: 12rem;
 
   /*----- Other Values -----*/
   --transition: 350ms ease-in;
