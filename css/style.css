@@ -4,7 +4,6 @@
 /*========== HEADER & NAV ==========*/
 header {
   background-color: var(--bg-white);
-  height: 800px;
 }
 
 /* mobile navigation */
@@ -186,6 +185,8 @@ header {
 .banner .banner-txt .banner-btns {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 1.5rem;
   color: var(--color-dark-blue);
   font-weight: var(--fw-medium);
@@ -209,7 +210,7 @@ header {
 .banner .banner-txt .banner-btns a::after {
   content: "";
   position: absolute;
-  right: 0;
+  right: -1.1rem;
   border: solid var(--color-dark-blue);
   border-width: 0 2px 2px 0;
   display: inline-block;
@@ -225,13 +226,49 @@ header {
 }
 
 .banner .banner-txt .banner-btns a:hover::after {
-  right: -0.5rem;
+  right: -1.6rem;
 }
 
 /*========== MAIN ==========*/
 main {
   background-color: var(--bg-white);
   height: 1500px;
+}
+
+.icons {
+  width: 100%;
+  border-block-start: thin solid var(--color-light-gray);
+  padding-inline: var(--padding-inline);
+  padding-block: 4rem;
+  font-family: var(--font-primary);
+  font-weight: var(--fw-medium);
+  font-size: var(--fz-text-small);
+}
+
+.icons ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem 2rem;
+  justify-items: center;
+}
+
+.icons ul li {
+  padding: 1rem;
+}
+
+.icons ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icons ul li a:hover {
+  text-decoration: underline;
+}
+
+.icons img {
+  width: 3rem;
 }
 
 /*========== FOOTER ==========*/
@@ -243,12 +280,17 @@ footer {
 /*========== BREAKPOINTS ==========*/
 /* 600px */
 @media (min-width: 600px) {
-  .banner .banner-txt {
+  .banner .banner-txt,
+  .icons {
     padding-inline: var(--padding-inline-pc);
   }
 
   .banner .banner-txt h1 {
     font-size: var(--fz-banner-title-tab);
+  }
+
+  .icons ul {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -397,6 +439,13 @@ footer {
 
   .banner .banner-txt .banner-btns a:hover::after {
     right: -2.5rem;
+  }
+
+  .icons ul {
+    grid-template-columns: repeat(6, 1fr);
+    /* padding-inline: 8rem; */
+    width: 700px;
+    margin-inline: auto;
   }
 }
 
