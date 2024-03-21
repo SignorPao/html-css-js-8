@@ -347,6 +347,85 @@ main {
   right: -2.5rem;
 }
 
+/* articles */
+.articles {
+  padding-inline: var(--padding-inline);
+  padding-block: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  align-items: center;
+}
+
+.articles article {
+  width: 100%;
+}
+
+.articles article .article-txt h2 {
+  font-size: var(--fz-section-title-mob);
+  font-weight: var(--fw-default);
+  margin-block-end: 2rem;
+}
+
+.articles article .article-img {
+  margin-block-end: 2rem;
+  max-width: 75vw;
+}
+
+.articles article .articles-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: var(--color-secondary);
+  margin-top: 3rem;
+}
+
+.articles article .article-txt .articles-btns button {
+  width: fit-content;
+  border: thin solid var(--color-secondary);
+  color: var(--color-secondary);
+  font-weight: var(--fw-medium);
+  transition: border var(--transition) color var(--transition);
+}
+
+.articles article .article-txt .articles-btns button:hover {
+  border-color: var(--color-secondary-accent);
+  color: var(--color-secondary-accent);
+}
+
+.articles article .article-txt .articles-btns a {
+  font-weight: var(--fw-medium);
+  color: var(--color-secondary);
+  font-family: var(--font-primary);
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: fit-content;
+}
+
+.articles article .article-txt .articles-btns a::after {
+  content: "";
+  position: absolute;
+  right: -2rem;
+  border: solid var(--color-secondary);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(-45deg);
+  transition: right var(--transition-fast);
+}
+
+.articles article .article-txt .articles-btns a:hover {
+  color: var(--color-secondary-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+
+.articles article .article-txt .articles-btns a:hover::after {
+  right: -2.5rem;
+}
+
 /*========== FOOTER ==========*/
 footer {
   background-color: var(--bg-gray);
@@ -358,6 +437,14 @@ footer {
 @media (min-width: 500px) {
   .cards .card {
     width: 450px;
+  }
+
+  .articles article {
+    width: 450px;
+  }
+
+  .articles article .article-img {
+    max-width: 65vw;
   }
 }
 
@@ -388,6 +475,14 @@ footer {
 
   .cards .card .card-img img {
     height: 40vw;
+  }
+
+  .articles article {
+    width: 80vw;
+  }
+
+  .articles article .article-txt h2 {
+    font-size: var(--fz-section-title-tab);
   }
 }
 
@@ -430,13 +525,21 @@ footer {
 }
 
 /* 900px */
-@media (min-width: 900px){
+@media (min-width: 900px) {
   .cards .card {
     width: 750px;
   }
 
   .cards .card .card-img img {
     height: 30vw;
+  }
+
+  .articles article {
+    width: 750px;
+  }
+
+  .articles article .article-img {
+    width: 600px;
   }
 }
 
@@ -558,7 +661,7 @@ footer {
   .cards {
     padding-inline: var(--padding-inline-pc);
   }
-  
+
   .cards h2 {
     margin-block-end: 4rem;
   }
@@ -571,6 +674,35 @@ footer {
 
   .cards .card .card-img img {
     height: 15vw;
+  }
+
+  .articles {
+    padding-inline: var(--padding-inline-pc);
+  }
+
+  .articles article {
+    width: 100%;
+    display: flex;
+    gap: 8rem;
+    align-items: center;
+  }
+
+  .articles article .article-img {
+    flex: 1;
+  }
+
+  .articles article .article-txt {
+    flex: 1;
+  }
+
+  .articles article:nth-child(2) .article-img {
+    order: 2;
+  }
+
+  .articles article .articles-btns {
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
   }
 }
 
@@ -604,11 +736,16 @@ footer {
   .cards .card .card-img img {
     height: 12vw;
   }
+
+  .articles article {
+    gap: 12rem;
+  }
 }
 
 /* 1400px */
-@media (min-width: 1400px){
-  .cards {
+@media (min-width: 1400px) {
+  .cards,
+  .articles {
     padding-inline: var(--padding-inline-pc-wide);
   }
 }

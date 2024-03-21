@@ -10,7 +10,6 @@
   --color-text-default-secondary: #606162;
   --color-light-gray: #b6b6b6;
   --bg-gray: #f4f5f6;
-  /* --bg-white: #f2f2f2; */
   --bg-white: #ffffff;
 
   /*----- Shadow -----*/
@@ -26,8 +25,6 @@
   --font-primary: "Montserrat", sans-serif;
   --font-primary-2: "Roboto", sans-serif;
   --font-handwrite-1: "Nothing You Could Do", cursive;
-  --font-handwrite-2: "Hurricane", cursive;
-  --font-handwrite-3: "Vujahday Script", cursive;
   /* *fz-font size */
   --fz-banner-title-mob: 4rem;
   --fz-banner-title-tab: 5.2rem;
@@ -79,13 +76,9 @@ body {
   box-shadow: var(--shadow-medium);
 }
 
-/* .container {
-  max-width: var(--max-width-laptop);
-  margin-inline: auto;
-} */
-
 .btn {
   padding: 2rem 4rem;
   border-radius: 100px;
   transition: var(--transition);
+  font-family: var(--font-primary);
 }
