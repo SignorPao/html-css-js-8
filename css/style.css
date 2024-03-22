@@ -602,7 +602,67 @@ main {
 /*========== FOOTER ==========*/
 footer {
   background-color: var(--bg-gray);
-  height: 200px;
+  padding-inline: var(--padding-inline);
+  padding-block: 4rem;
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+footer nav + nav {
+  border-block-start: thin solid var(--color-light-gray);
+  padding-block-start: 3rem;
+}
+
+footer nav h4 {
+  font-weight: var(--fw-medium);
+  margin-block-end: 2rem;
+}
+
+footer nav ul {
+  font-size: var(--fz-text-small);
+  font-weight: var(--fw-thin);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+footer nav ul li a:hover {
+  text-decoration: underline;
+}
+
+footer .socials-and-copyright {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .socials-and-copyright ul {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+footer .socials-and-copyright img {
+  width: 24px;
+  height: 24px;
+  filter: grayscale(100%);
+}
+
+footer .socials-and-copyright a:hover img {
+  filter: grayscale(0);
+}
+
+footer .socials-and-copyright p {
+  font-size: var(--fz-text-smaller);
+}
+
+footer .socials-and-copyright p a:hover {
+  text-decoration: underline;
 }
 
 /*========== BREAKPOINTS ==========*/
@@ -717,6 +777,17 @@ footer {
 
   .banner .banner-txt p {
     max-width: 55vw;
+  }
+
+  footer h4 {
+    display: none;
+  }
+
+  footer nav ul {
+    gap: 1rem 3rem;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding-inline: calc((100vw - 70%) / 2);
   }
 }
 
