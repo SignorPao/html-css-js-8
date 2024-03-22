@@ -426,6 +426,67 @@ main {
   right: -2.5rem;
 }
 
+/* video */
+.video {
+  padding-inline: var(--padding-inline);
+  padding-block: 4rem;
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.video h2 {
+  font-size: var(--fz-section-title-mob);
+  font-weight: var(--fw-default);
+  margin-bottom: 2rem;
+}
+
+.video .video-poster {
+  cursor: pointer;
+  background-color: rgb(1, 1, 39);
+  position: relative;
+  margin-inline: auto;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.video .video-poster img {
+  opacity: 0.6;
+  object-fit: cover;
+}
+
+.video .video-poster span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--bg-white);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: var(--fw-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video .video-poster span::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 11px solid var(--color-text-default);
+  rotate: 90deg;
+  margin-inline-start: 1rem;
+}
+
+.video .video-poster:hover span {
+  background-color: var(--bg-gray);
+}
+
 /*========== FOOTER ==========*/
 footer {
   background-color: var(--bg-gray);
@@ -445,6 +506,11 @@ footer {
 
   .articles article .article-img {
     max-width: 65vw;
+  }
+
+  .video {
+    width: 450px;
+    padding-inline: 0;
   }
 }
 
@@ -483,6 +549,18 @@ footer {
 
   .articles article .article-txt h2 {
     font-size: var(--fz-section-title-tab);
+  }
+
+  .video {
+    width: 80vw;
+  }
+
+  .video h2 {
+    font-size: var(--fz-section-title-tab);
+  }
+
+  .video .video-poster {
+    width: 60vw;
   }
 }
 
@@ -703,6 +781,18 @@ footer {
     flex-direction: row;
     gap: 2rem;
     align-items: center;
+  }
+
+  .video {
+    max-width: 55vw;
+  }
+
+  .video .video-poster {
+    width: 100%;
+  }
+
+  .video .video-poster span {
+    padding: 1rem 2rem;
   }
 }
 
