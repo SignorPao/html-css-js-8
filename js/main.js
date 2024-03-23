@@ -2,7 +2,7 @@
 const menuBtn = document.querySelector(".burger"),
   mobileMenuList = document.querySelector(".mobile-menu"),
   menuBtnIcon = menuBtn.querySelector("img"),
-  link = mobileMenuList.querySelectorAll('li');
+  link = mobileMenuList.querySelectorAll("li");
 
 menuBtn.addEventListener("click", () => {
   mobileMenuList.classList.toggle("open");
@@ -20,3 +20,12 @@ link.forEach((l) =>
     menuBtnIcon.setAttribute("src", "/img/menu-burger.svg");
   })
 );
+
+// scroll to top
+const scrollUp = () => {
+  const scrollUp = document.querySelector(".scroll-up");
+  this.scrollY >= 350
+    ? scrollUp.classList.add("show-scroll")
+    : scrollUp.classList.remove("show-scroll");
+};
+window.addEventListener("scroll", scrollUp);

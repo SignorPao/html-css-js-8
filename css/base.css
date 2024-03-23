@@ -53,8 +53,8 @@
   --padding-inline-pc-wide: 12rem;
 
   /*----- Other Values -----*/
-  --transition: 350ms ease-in;
-  --transition-fast: 100ms ease-in;
+  --transition: 350ms ease-in-out;
+  --transition-fast: 100ms ease-in-out;
 }
 
 /*========== BASE ==========*/

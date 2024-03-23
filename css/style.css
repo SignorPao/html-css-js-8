@@ -669,6 +669,56 @@ footer .socials-and-copyright p a:hover {
   text-decoration: underline;
 }
 
+/* scroll to top */
+.scroll-up {
+  display: none;
+  position: fixed;
+  right: 1rem;
+  width: 60px;
+  height: 60px;
+  bottom: -50%;
+  transition: bottom var(--transition);
+}
+
+.scroll-up span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: transparent;
+  border: thin solid var(--color-secondary);
+  will-change: transform;
+  transition: transform var(--transition), border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.scroll-up span::after {
+  content: "";
+  position: absolute;
+  top: 2.5rem;
+  border: thin solid var(--color-secondary);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(-135deg);
+}
+
+.scroll-up span:hover,
+.scroll-up span:hover::after {
+  border-color: var(--color-secondary-accent);
+}
+
+.scroll-up:hover span {
+  transition: transform var(--transition-fast);
+  transform: translateY(-0.6rem);
+}
+
+.show-scroll {
+  bottom: 4rem;
+}
+
 /*========== BREAKPOINTS ==========*/
 /* 500px */
 @media (min-width: 500px) {
@@ -1091,6 +1141,10 @@ footer .socials-and-copyright p a:hover {
     flex-direction: row;
     justify-content: flex-start;
   }
+
+  .scroll-up {
+    display: block;
+  }
 }
 
 /* 1100px */
@@ -1161,5 +1215,12 @@ footer .socials-and-copyright p a:hover {
 
   .video .video-poster {
     max-width: 800px;
+  }
+}
+
+/* 1600px */
+@media (min-width: 1600px) {
+  .scroll-up {
+    right: calc((100vw - var(--max-body)) / 2);
   }
 }
