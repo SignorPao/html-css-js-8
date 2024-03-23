@@ -633,10 +633,6 @@ footer .footer-quick-links ul:nth-last-child(1) {
   display: none;
 }
 
-footer .footer-resources-links ul li a {
-  font-size: var(--fz-text-smaller);
-}
-
 footer nav ul li a:hover {
   text-decoration: underline;
 }
@@ -935,6 +931,7 @@ footer .socials-and-copyright p a:hover {
 
   .cards {
     padding-inline: var(--padding-inline-pc);
+    padding-block-end: 6rem;
   }
 
   .cards h2 {
@@ -953,6 +950,7 @@ footer .socials-and-copyright p a:hover {
 
   .articles {
     padding-inline: var(--padding-inline-pc);
+    padding-block-end: 6rem;
   }
 
   .articles article {
@@ -976,20 +974,21 @@ footer .socials-and-copyright p a:hover {
 
   .video {
     max-width: 55vw;
+    padding-block-end: 6rem;
   }
 
   .video .video-poster {
-    width: 100%;
+    max-width: 100%;
   }
 
   .video .video-poster span {
     padding: 1rem 2rem;
   }
 
-  .blog,
-  footer {
+  .blog {
     padding-inline: var(--padding-inline-pc);
     width: 100%;
+    padding-block-end: 6rem;
   }
 
   .blog .blog-header {
@@ -1048,6 +1047,11 @@ footer .socials-and-copyright p a:hover {
     display: none;
   }
 
+  footer {
+    padding-inline: var(--padding-inline-pc);
+    width: 100%;
+  }
+
   footer .footer-quick-links ul,
   footer .footer-resources-links ul {
     justify-content: flex-start;
@@ -1073,6 +1077,10 @@ footer .socials-and-copyright p a:hover {
 
   footer .footer-quick-links a:hover img {
     filter: grayscale(0);
+  }
+
+  footer .footer-resources-links ul li a {
+    font-size: var(--fz-text-smaller);
   }
 
   footer .socials-and-copyright ul {
@@ -1112,8 +1120,16 @@ footer .socials-and-copyright p a:hover {
     min-height: 55vmin;
   }
 
+  .cards {
+    padding-block-end: 8rem;
+  }
+
   .cards .card .card-img img {
     height: 12vw;
+  }
+
+  .articles {
+    padding-block-end: 8rem;
   }
 
   .articles article {
@@ -1125,14 +1141,25 @@ footer .socials-and-copyright p a:hover {
     gap: 2rem;
     align-items: center;
   }
+
+  .video {
+    padding-block-end: 8rem;
+  }
+
+  .blog {
+    padding-block-end: 8rem;
+  }
 }
 
 /* 1400px */
 @media (min-width: 1400px) {
   .cards,
   .articles,
-  .blog,
-  footer {
+  .blog {
     padding-inline: var(--padding-inline-pc-wide);
+  }
+
+  .video .video-poster {
+    max-width: 800px;
   }
 }
